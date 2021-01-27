@@ -1,0 +1,22 @@
+{
+  "name": "hashtag-backend",
+  "version": "1.0.0",
+  "description": "hashTag",
+  "repository": "https://github.com/dorothy7964/hashtag-backend.git",
+  "author": "sample <dorothy_007@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "graphql-yoga": "^1.18.3",
+    "merge-graphql-schemas": "^1.7.8"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js",
+    "prebuild": "yarn run generate",
+    "build": "babel src -d build",
+    "postbuild": "npx copy src/api/**/**.graphql ./build/api/",
+    "start": "node build/server.js"
+  }
+}
