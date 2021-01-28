@@ -1,0 +1,23 @@
+# HashtagTrend
+type Posting {
+    hashtag: String
+    post_gap: Int
+    post_rate: Float
+    post_cnt: Int
+}
+
+type TrendGap {
+    result: Int
+    day1_gap: [Posting!]!
+    day7_gap: [Posting!]!
+    day30_gap: [Posting!]!
+    day60_gap: [Posting!]!
+}
+
+type TrendRate {
+    result: Int
+    day1_rate: [Posting!]!
+    day7_rate: [Posting!]!
+    day30_rate: [Posting!]!
+    day60_rate: [Posting!]!
+}
