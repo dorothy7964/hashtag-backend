@@ -21,3 +21,99 @@ type TrendRate {
     day30_rate: [Posting!]!
     day60_rate: [Posting!]!
 }
+
+type TrendList {
+    add_date: String
+    hashtag: String
+    post_cnt: Int
+    check_start_time: Int
+}
+
+# HashTagInfo
+type BasicsInfo {
+    hashtag: String
+    post_cnt: Int
+}
+
+type UserInfo {
+    score: Int
+    username: String
+    follower_cnt: Int
+    follow_cnt: Int
+    post_cnt: Int
+    average_like_cnt: Int
+}
+
+type PostingTrends {
+    check_date: String
+    post_cnt: Int
+}
+
+type RecentPosts {
+    url: String
+    post_time: String
+    like_cnt: Int
+    comment_cnt: Int
+    contents: String
+    hashtag_cnt: Int
+    content_length: Int
+    pic_cnt: Int
+    mov_cnt: Int
+}
+
+type RecentHastag {
+    hashtag: String
+    count: Int
+}
+
+
+type IdInfo {
+    username: String
+    follower_cnt: Int
+    follow_cnt: Int
+    post_cnt: Int
+    average_like_cnt: Int
+    average_comment_cnt: Int
+    average_post_hour: Int
+    full_name: String
+    is_business: Int
+    is_verified: Int
+    post_list: [RecentPosts!]!
+    recent_hashtag_list: [RecentHastag!]!
+}
+
+type PostsInfo {
+    url: String
+    like_cnt: Int
+    comment_cnt: Int
+    mov_cnt: Int
+    pic_cnt: Int
+    post_time: String
+    id_data: IdInfo
+}
+
+type PostsInfoRemain {
+    remain: Int
+    url: String
+    like_cnt: Int
+    comment_cnt: Int
+    mov_cnt: Int
+    pic_cnt: Int
+    post_time: String
+    id_data: IdInfo
+}
+ 
+
+type hashInfo {
+    result: Int
+    info: BasicsInfo
+    top_relation: [BasicsInfo!]!
+    top_autocomplete: [BasicsInfo!]!
+    lately_popular: [PostsInfo!]!
+    top_remain: [PostsInfoRemain!]!
+    top_like: [PostsInfo!]!
+    top_comment: [PostsInfo!]!
+    # top_id: [UserInfo!]!
+    post_log: [PostingTrends!]!
+}
+
