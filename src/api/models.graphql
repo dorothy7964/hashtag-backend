@@ -6,6 +6,13 @@ type Posting {
     post_cnt: Int
 }
 
+type RecentPosting {
+    add_date: String
+    hashtag: String
+    post_cnt: Int
+    check_start_time: Int
+}
+
 type TrendGap {
     result: Int
     day1_gap: [Posting!]!
@@ -22,11 +29,8 @@ type TrendRate {
     day60_rate: [Posting!]!
 }
 
-type TrendList {
-    add_date: String
-    hashtag: String
-    post_cnt: Int
-    check_start_time: Int
+type TrendRecent {
+    recent_list: [RecentPosting!]!
 }
 
 # HashTagInfo
