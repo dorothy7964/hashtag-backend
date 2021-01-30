@@ -1,6 +1,6 @@
 # 해시태그
 
-[front Github 바로가기](hhttps://github.com/dorothy7964/hashtag-frontend "frontend Github 바로가기") <br/>
+[front Github 바로가기](https://github.com/dorothy7964/hashtag-frontend "frontend Github 바로가기") <br/>
 
 # Install
 
